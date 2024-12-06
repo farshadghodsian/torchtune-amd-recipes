@@ -62,7 +62,7 @@ save_adapter_weights_only: False # PeFT formatting not available yet. This will 
 dataset:
   _component_: torchtune.datasets.multimodal.the_cauldron_dataset
   packed: False  # True increases speed
-  subset: ocrvqa
+  subset: scienceqa
 seed: null
 shuffle: True
 collate_fn: torchtune.data.padded_collate_tiled_images_and_mask
@@ -70,8 +70,8 @@ collate_fn: torchtune.data.padded_collate_tiled_images_and_mask
 # Fine-tuning arguments
 epochs: 1
 max_steps_per_epoch: null
-batch_size: 8
-gradient_accumulation_steps: 1  # Use to increase virtual batch size
+batch_size: 2
+gradient_accumulation_steps: 4  # Use to increase virtual batch size
 optimizer:
   _component_: torch.optim.AdamW
   fused: True

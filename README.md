@@ -11,7 +11,7 @@ Torchtune recipes for fine-tuning on AMD Radeon GPUs
 In order to export training metrics to Weights and Biases (wandb.ai) you will need to have already created an account on http://wandb.ai and saved your api-key to an environment variable
 
 ```
-$YOUR_API_KEY=ABCxxxxxxxxxxxxxxxxx123
+YOUR_API_KEY=ABCxxxxxxxxxxxxxxxxx123
 ```
 
 </br>
@@ -66,6 +66,13 @@ WANDB_NAME="llama3.2-vision-11b-instruct Lora Fine-tuning Demo"
 WANDB_NOTES="Demo of Lora Fine-tuning Llama3.2-vision-11b-intruct model on multi-modal image + text dataset on AMD GPUs"
 ```
 </br>
+
+Note: If the above WandB Environment variables aren't working you can log into you WandB account with your API key manually by doing:
+```
+wandb login
+```
+</br>
+
 
 ## 8. Download llama3.2-vision-11b-instruct model
 ```
